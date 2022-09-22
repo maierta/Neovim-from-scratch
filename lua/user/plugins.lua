@@ -95,6 +95,7 @@ return packer.startup(function(use)
   -- My additional plugins
   use("mtikekar/nvim-send-to-term")
   use("lervag/vimtex")
+  use("nvim-telescope/telescope-file-browser.nvim") 
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
