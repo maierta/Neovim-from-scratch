@@ -5,6 +5,10 @@ vim.cmd [[
     autocmd TextYankPost * silent!lua require('vim.highlight').on_yank({higroup = 'Visual', timeout = 200}) 
     autocmd BufWinEnter * :set formatoptions-=cro
     autocmd FileType qf set nobuflisted
+    autocmd FileType tex set wrap
+    autocmd FileType tex set linebreak
+    autocmd FileType tex nmap <buffer> <DOWN> gj
+    autocmd FileType tex nmap <buffer> <UP> gk
   augroup end
 
   augroup _git
