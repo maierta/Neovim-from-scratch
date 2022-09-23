@@ -5,10 +5,6 @@ vim.cmd [[
     autocmd TextYankPost * silent!lua require('vim.highlight').on_yank({higroup = 'Visual', timeout = 200}) 
     autocmd BufWinEnter * :set formatoptions-=cro
     autocmd FileType qf set nobuflisted
-    " autocmd FileType tex set wrap
-    " autocmd FileType tex set linebreak
-    " autocmd FileType tex nmap <buffer> <DOWN> gj
-    " autocmd FileType tex nmap <buffer> <UP> gk
   augroup end
 
   augroup _git
@@ -37,6 +33,12 @@ vim.cmd [[
     autocmd!
     autocmd FileType tex call SetServerName()
     autocmd FileType tex nmap Q :call TeX_fmt()<CR>
+    autocmd FileType tex set formatexpr=TeX_fmt()
+    autocmd FileType tex set tw=79
+    " autocmd FileType tex set wrap
+    " autocmd FileType tex set linebreak
+    " autocmd FileType tex nmap <buffer> <DOWN> gj
+    " autocmd FileType tex nmap <buffer> <UP> gk
   augroup end
 
   function! SetServerName()
