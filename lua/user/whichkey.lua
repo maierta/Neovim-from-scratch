@@ -96,6 +96,8 @@ local mappings = {
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
   ["B"] = { "<cmd>lua require('telescope').extensions.file_browser.file_browser()<cr>", "Filebrowser" },
+  ["/"] = { "<Plug>(comment_toggle_linewise_current)", "Comment toggle current line" },
+
 
   p = {
     name = "Packer",
