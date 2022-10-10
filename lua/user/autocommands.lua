@@ -33,7 +33,7 @@ vim.cmd [[
     autocmd!
     autocmd FileType tex call SetServerName()
     autocmd FileType tex nmap Q :call TeX_fmt()<CR>
-    autocmd FileType tex set formatexpr=TeX_fmt()
+    " autocmd FileType tex set formatexpr=TeX_fmt()
     autocmd FileType tex set tw=79
     " autocmd FileType tex set wrap
     " autocmd FileType tex set linebreak
